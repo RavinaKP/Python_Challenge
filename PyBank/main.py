@@ -36,28 +36,16 @@ with open("budget_data.csv") as csv_file:
     # print both values with months
     print("Greatest Increase in Profits:", total_num[total_change.index(max_val)+1],"($"+str(int(max_val))+")")
     print("Greatest Decrease in Profits:", total_num[total_change.index(min_val)+1], "($"+str(int(min_val))+")")
-
-
-
-
-            
-
-
+f= open ("analysis.txt", "a")
+print("Financial Analaysis")
+print("-------------------------------")
+print("Total_month:", len(total_num),file=f)
+print("Total:", "$", int(sum(total_proloss)),file=f)
+print("Average Change:","%.2f" % round(sum(total_change)/len(total_change),2),file=f)            
+print("Greatest Increase in Profits:", total_num[total_change.index(max_val)+1],"($"+str(int(max_val))+")",file=f)
+print("Greatest Decrease in Profits:", total_num[total_change.index(min_val)+1], "($"+str(int(min_val))+")",file=f)
+f.close()
 
 
         
 
-
-
-
-        #total_months= len(row)
-
-
-
-
-
-#with open(csvpath) as csvfile:
-#file = open("budget_data.csv", "r")
-#print(file.read())
-#lines = file.read()
-#print(lines)
