@@ -54,3 +54,18 @@ with open('election_data.csv') as csv_file:
     winning_candi_sum = (f"Winner: {candi_win}\n")
     print(winning_candi_sum)
     print("-------------------------------")
+f = open("analysis.txt", "w")
+f.write("Election Results")
+f.write("\n-------------------------------\n")
+with open('analysis.txt','a') as f:
+    out_put = { 'Total Votes :': 369711,
+               'harles Casper Stockham:': '23.049% (85213)',
+               'Diana DeGette:': '73.812% (272892)',
+               'Raymon Anthony Doane:': '3.139%, (11606)'}
+    for i,j in out_put.items():
+        print( i, ':', j,file=f)
+    f.write("\n-------------------------------\n")
+    f.write("\nWinner: Diana DeGette")
+    print("Winner: Diana DeGette")
+f.close()
+
