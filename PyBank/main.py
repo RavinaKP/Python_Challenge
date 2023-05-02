@@ -36,6 +36,7 @@ with open("budget_data.csv") as csv_file:
     # print both values with months
     print("Greatest Increase in Profits:", total_num[total_change.index(max_val)+1],"($"+str(int(max_val))+")")
     print("Greatest Decrease in Profits:", total_num[total_change.index(min_val)+1], "($"+str(int(min_val))+")")
+# creat text file call anaylsis and print result in it
 f= open ("analysis.txt", "w")
 f.write("Financial Analaysis")
 f.write("\n-------------------------------")

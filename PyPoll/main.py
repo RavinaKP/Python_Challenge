@@ -54,6 +54,7 @@ with open('election_data.csv') as csv_file:
     winning_candi_sum = (f"Winner: {candi_win}\n")
     print(winning_candi_sum)
     print("-------------------------------")
+    # creat text file and add analysis in it
 f = open("analysis.txt", "w")
 f.write("Election Results")
 f.write("\n-------------------------------\n")
